@@ -245,6 +245,7 @@ export default {
       }
       _this.inputTagsForPhones = [];
       _this.inputTagsForEmails = [];
+      _this.groups_option = [];
     },
     removeTag(index,name) {
       const _this = this;

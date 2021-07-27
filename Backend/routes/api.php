@@ -16,6 +16,9 @@ Route::group([ 'middleware' => 'api', 'prefix' => 'auth' ], function ($router) {
 
 Route::group(['middleware' => 'api'], function ($router) {
 
-
-
+    //ContactController
+    Route::resource('/contact', 'ContactController')->except([
+        'show', 'update'
+    ]);
+    Route::get('/contact/search', 'ContactController@search');
 });

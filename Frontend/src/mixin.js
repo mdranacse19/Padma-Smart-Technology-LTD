@@ -56,7 +56,11 @@ export default {
             const _this = this;
             _this.$store.state.pageLoader = true;
             var dataParams = filter;
-            axios.get(url, _this.myConfig, {params: dataParams} )
+            let setMultiParams = {
+                params: dataParams,
+                headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+            };
+            axios.get(url, setMultiParams )
                 .then(response => {
                     //console.log(Object.keys(response.data.bank_account).length )
                     _this.dataList = response.data;
@@ -67,23 +71,32 @@ export default {
                     _this.$store.state.pageLoader = false;
                 })
         },
-        openModal(modalId, url) {
+        openModal(modalId, urlObj) {
             const _this = this;
-            if (url){
+            if (urlObj){
                 _this.$store.state.pageLoader = true;
-                axios.get(url, _this.myConfig)
-                .then(response => {
-                    //console.log(response)
-                    _this.optionData = response.data;
+                axios.all([_this.getOptionData(urlObj.getGroup)])
+                .then(axios.spread((res_one)=>{
+                    //console.log(res_one)
+                    if (res_one.data){
+                        var responseData = res_one.data.groups;
+                        _this.optionData = [];
+                        responseData.forEach(function (item) {
+                            let data = { id: item.id, name: item.name };
+                            _this.optionData.push(data);
+                        });
+                    }
                     _this.$store.state.pageLoader = false;
-                })
-                .catch(function (error) {
+                })).catch(function (error){
                     _this.$toastr.e(error);
                     _this.$store.state.pageLoader = false;
                 })
             }
             _this.formReset();
             $('#'+ modalId).modal('show');
+        },
+        getOptionData(url){
+            return axios.get(url, this.myConfig);
         },
         formReset(){
             const _this = this;
@@ -99,7 +112,7 @@ export default {
                 if (obj.modalId) $('#' + obj.modalId).modal('hide');
                 _this.formReset();
                 _this.$store.state.pageLoader = false;
-                _this.getDataList(_this.backendURL+_this.setUrl, {});
+                _this.getDataList(_this.backendURL+_this.setUrl);
                 _this.$toastr.s(response.data.message);
             })
             .catch(function(error) {
@@ -109,21 +122,24 @@ export default {
                 _this.$toastr.e(error);
             })
         },
-        editFormData(obj, options = {}, callBack) {
+        editFormData(obj, callBack) {
             const _this = this;
             _this.$store.state.pageLoader = true;
             axios.get(obj.url , _this.myConfig )
             .then(response => {
+                _this.formData = response.data.formData;
                 if (typeof callBack === 'function') {
                     callBack(_this.formData);
                 }
-                _this.formData = response.data.formData;
-                _this.optionData = response.data;
+                if (response.data){
+                    var responseData = response.data.groups;
+                    responseData.forEach(function (item) {
+                        let data = { id: item.id, name: item.name };
+                        _this.optionData.push(data);
+                    });
+                }
                 $('#' + obj.modalId).modal('show');
                 _this.$store.state.pageLoader = false;
-                if (response.data.status != 1){
-                    _this.$toast.s(response.data.message);
-                }
             })
             .catch(function(error) {
                 _this.$store.state.pageLoader = false;
@@ -147,7 +163,7 @@ export default {
                         .then(response => {
                             _this.$swal('Deleted!', 'Your data has been deleted.', 'success');
                             _this.$store.state.pageLoader = false;
-                            _this.getDataList(_this.backendURL+_this.setUrl, {});
+                            _this.getDataList(_this.backendURL+_this.setUrl);
                         })
                         .catch(function(error) {
                             _this.$store.state.pageLoader = false;

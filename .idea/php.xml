@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand />
-    <select />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="2813129c-cdaa-4fbc-bc13-86601b03b966" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/components/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/components/Dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/mixin.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/mixin.js" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/Backend/composer.json</pharConfigPath>
-    <execution />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/Backend/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/Backend/vendor/phar-io/version" />
@@ -138,84 +112,10 @@
       <path value="$PROJECT_DIR$/Backend/vendor/symfony/translation" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1rTq15hJ2GcESYrQHKKab4PHRHG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Frontend" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\XAMPP\htdocs\Personal\For-Oxford-International-School\Frontend\src\components" />
-    </key>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="2813129c-cdaa-4fbc-bc13-86601b03b966" name="Default Changelist" comment="" />
-      <created>1619010226468</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1619010226468</updated>
-      <workItem from="1619010231511" duration="12954000" />
-      <workItem from="1619169583653" duration="2353000" />
-      <workItem from="1619514897059" duration="20000" />
-      <workItem from="1627309876503" duration="2267000" />
-      <workItem from="1627312214685" duration="2922000" />
-      <workItem from="1627363808516" duration="4750000" />
-      <workItem from="1627369045794" duration="2122000" />
-      <workItem from="1627371256773" duration="5609000" />
-      <workItem from="1627378018974" duration="24866000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627364397239">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1627364397239" />
-    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619020936238">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1619020936238" />
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1627378376379">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1627378376379" />
-    <state x="184" y="14" key="SettingsEditor" timestamp="1627371198769">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1627371198769" />
-    <state x="390" y="0" width="585" height="738" key="find.popup" timestamp="1627378388157">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="390" y="0" width="585" height="738" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1627378388157" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/Backend/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
 </project>
